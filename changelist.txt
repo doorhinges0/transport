@@ -23,3 +23,7 @@ Dec 28, 2015: (changelist: 10002)
 2. create a project (transport-misc). Separate the process to load driver/car information from simulator
 3. Simulator sends the signals via HTTP instead of Kafka. Add the new project transport-httpclient
 4. add shell scripts
+
+Feb 21th, 2016: (changelist: 10003)
+1. dump the simulation results directly to a file
+2. start city | end city | drive licens id | timestamp | lat | long | gas | speed | weather | pressure

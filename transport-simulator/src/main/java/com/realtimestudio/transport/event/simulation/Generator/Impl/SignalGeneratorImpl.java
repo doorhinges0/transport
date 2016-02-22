@@ -29,6 +29,7 @@ public class SignalGeneratorImpl implements SignalGenerator{
 	
 	private static final short BASICGAS = 40;
 	private static final short DECREGAS = 1;
+	private static final short ALERTGAS = 5;
 	
 	private static final short BASICSPEED = 90;
 	private static final short SPEEDCHAGERANGE = 30;
@@ -83,6 +84,7 @@ public class SignalGeneratorImpl implements SignalGenerator{
 	private short getGasVol(int i){
 		if(i==0) return (short) (BASICGAS+random.nextInt(BASICGAS));
 		short prev = points.get(i-1).getGasVol();
+		if(prev<=ALERTGAS) return (short) (BASICGAS+random.nextInt(BASICGAS));
 		return (short) (prev - DECREGAS);		
 	}
 	
