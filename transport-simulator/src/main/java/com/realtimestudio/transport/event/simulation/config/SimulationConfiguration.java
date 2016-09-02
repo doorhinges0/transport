@@ -14,9 +14,9 @@ import com.google.common.reflect.TypeParameter;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.realtimestudio.transport.model.Route;
 import com.realtimestudio.transport.model.Car;
 import com.realtimestudio.transport.model.Driver;
-import com.realtimestudio.transport.model.Route;
 
 public class SimulationConfiguration {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SimulationConfiguration.class);

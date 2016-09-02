@@ -9,8 +9,8 @@ import org.springframework.core.env.Environment;
 import com.realtimestudio.transport.httpclient.impl.HttpSignalCollector;
 import com.realtimestudio.transport.streaming.SignalCollector;
 
-@Configuration
-@PropertySource("classpath:http.properties")
+//@Configuration
+//@PropertySource("classpath:http.properties")
 public class HttpConfig {
 	
 	@Autowired

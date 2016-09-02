@@ -7,10 +7,14 @@
 
 	<parent>
 		<groupId>com.realtimestudio</groupId>
-		<artifactId>master</artifactId>
+		<artifactId>transport-master</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>
+	
+	<properties>
+	   <sksamuel.kafka.version>0.8.0-beta1</sksamuel.kafka.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -18,30 +22,15 @@
 			<artifactId>transport-model</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka_2.9.2</artifactId>
+			<groupId>com.sksamuel.kafka</groupId>
+			<artifactId>kafka_2.10</artifactId>
+			<version>${sksamuel.kafka.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-				<exclusion>
-					<artifactId>jmxri</artifactId>
-					<groupId>com.sun.jmx</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>jms</artifactId>
-					<groupId>javax.jms</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>jmxtools</artifactId>
-					<groupId>com.sun.jdmk</groupId>
+					<artifactId>slf4j-simple</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>

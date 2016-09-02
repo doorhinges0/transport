@@ -24,7 +24,7 @@ import com.realtimestudio.transport.model.Location;
 import com.realtimestudio.transport.model.RoutePoint;
 import com.realtimestudio.transport.model.Weather;
 
-@Repository
+//@Repository
 public class GPSSignalDaoImpl extends CommonDaoImpl<RoutePoint> implements GPSSignalDao {
 	private final String tableName = GPSSIGNAL_TAB;
 	

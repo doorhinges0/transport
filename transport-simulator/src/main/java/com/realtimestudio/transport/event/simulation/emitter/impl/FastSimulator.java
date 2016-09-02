@@ -22,9 +22,9 @@ import com.realtimestudio.transport.event.simulation.Generator.SignalGenerator;
 import com.realtimestudio.transport.event.simulation.Generator.Impl.SignalGeneratorImpl;
 import com.realtimestudio.transport.event.simulation.config.SimulationConfiguration;
 import com.realtimestudio.transport.event.simulation.emitter.SignalEmitter;
+import com.realtimestudio.transport.model.Route;
 import com.realtimestudio.transport.model.Car;
 import com.realtimestudio.transport.model.Driver;
-import com.realtimestudio.transport.model.Route;
 import com.realtimestudio.transport.streaming.SignalCollector;
 import com.realtimestudio.transport.utils.RandomUtils;
 

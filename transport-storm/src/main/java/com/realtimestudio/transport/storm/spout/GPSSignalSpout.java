@@ -3,14 +3,14 @@ package com.realtimestudio.transport.storm.spout;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.realtimestudio.transport.storm.util.Constants;
+import com.realtimestudio.transport.storm.util.Parameters;
+
+import backtype.storm.spout.SchemeAsMultiScheme;
 import storm.kafka.BrokerHosts;
 import storm.kafka.KafkaSpout;
 import storm.kafka.SpoutConfig;
 import storm.kafka.ZkHosts;
-import backtype.storm.spout.SchemeAsMultiScheme;
-
-import com.realtimestudio.transport.storm.util.Constants;
-import com.realtimestudio.transport.storm.util.Parameters;
 
 public class GPSSignalSpout extends KafkaSpout{
 	

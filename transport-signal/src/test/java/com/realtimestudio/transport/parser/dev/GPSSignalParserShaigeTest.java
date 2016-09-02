@@ -44,8 +44,8 @@ public class GPSSignalParserShaigeTest {
 	
 	private void parseNformat(String str) throws ParseException{
 		GPSSignalParser parser = new GPSSignalParserImpl(str);
-		String carID = parser.getCarID();
-		RoutePoint point = parser.getRoutePoint();
+		String carID = parser.getID();
+		RoutePoint point = (RoutePoint) parser.getRoutePoint();
 		System.out.println(carID);
 		System.out.println(point);
 		

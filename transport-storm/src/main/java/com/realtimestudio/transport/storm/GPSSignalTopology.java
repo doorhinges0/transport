@@ -14,14 +14,6 @@ import static com.realtimestudio.transport.utils.StringUtils.parseIntOrDefault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import backtype.storm.Config;
-import backtype.storm.generated.AlreadyAliveException;
-import backtype.storm.generated.AuthorizationException;
-import backtype.storm.generated.InvalidTopologyException;
-import backtype.storm.generated.StormTopology;
-import backtype.storm.topology.TopologyBuilder;
-import backtype.storm.tuple.Fields;
-
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import com.realtimestudio.transport.model.RoutePoint;
 import com.realtimestudio.transport.storm.bolt.GPSSignalHBaseBolt;
@@ -29,6 +21,14 @@ import com.realtimestudio.transport.storm.bolt.GPSSignalHDFSBolt;
 import com.realtimestudio.transport.storm.spout.GPSSignalSpout;
 import com.realtimestudio.transport.storm.util.Parameters;
 import com.realtimestudio.transport.storm.util.StormRunner;
+
+import backtype.storm.Config;
+import backtype.storm.generated.AlreadyAliveException;
+import backtype.storm.generated.AuthorizationException;
+import backtype.storm.generated.InvalidTopologyException;
+import backtype.storm.generated.StormTopology;
+import backtype.storm.topology.TopologyBuilder;
+import backtype.storm.tuple.Fields;
 
 
 public class GPSSignalTopology {

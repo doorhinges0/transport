@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import com.realtimestudio.transport.dao.ConnectionManager;
 
-public class ConnectionManagerImpl implements ConnectionManager{
+public class ConnectionManagerImpl implements ConnectionManager<Connection>{
 	private final Logger LOGGER = LoggerFactory.getLogger(ConnectionManagerImpl.class);
 	
 	private final BlockingQueue<Connection> availableConnectionQueue;
@@ -34,6 +34,7 @@ public class ConnectionManagerImpl implements ConnectionManager{
 		connectionMap = new ConcurrentHashMap<>(maxConnections);
 		addNewConnections(minConnections);
 		LOGGER.info(minConnections + " connections have been created.");
+		new ConnMaintenThread().start();
 	}
 
 	@Override

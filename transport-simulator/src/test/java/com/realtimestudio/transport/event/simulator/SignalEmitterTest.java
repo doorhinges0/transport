@@ -31,7 +31,7 @@ public class SignalEmitterTest {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			System.out.println(parser.getCarID());
+			System.out.println(parser.getID());
 			System.out.println(parser.getRoutePoint());			
 		}
 
@@ -44,7 +44,7 @@ public class SignalEmitterTest {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			System.out.println(parser.getCarID());
+			System.out.println(parser.getID());
 			System.out.println(parser.getRoutePoint());	
 			
 		}

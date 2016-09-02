@@ -11,12 +11,12 @@ import java.util.Random;
 
 import com.realtimestudio.transport.event.gps.GPSSignalFormatterImpl;
 import com.realtimestudio.transport.event.simulation.Generator.SignalGenerator;
-import com.realtimestudio.transport.model.Car;
 import com.realtimestudio.transport.model.Direction;
-import com.realtimestudio.transport.model.Driver;
 import com.realtimestudio.transport.model.Location;
 import com.realtimestudio.transport.model.RoutePoint;
 import com.realtimestudio.transport.model.Weather;
+import com.realtimestudio.transport.model.Car;
+import com.realtimestudio.transport.model.Driver;
 
 public class SignalGeneratorImpl implements SignalGenerator{
 	private Driver driver;

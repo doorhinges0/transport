@@ -21,5 +21,18 @@ public class DateUtils {
 	public static int getYearDiff(Date d1, Date d2){
 		return (int) ((d1.getTime() - d2.getTime())/(1000L*3600*24*365));
 	}
+	
+	public static Date getDateOrNull (String sDate, String sFormat)
+	{
+		try{
+			SimpleDateFormat  format = new SimpleDateFormat(sFormat);
+			return format.parse(sDate);
+		}
+		catch(ParseException e){
+			return null;
+		}
+		
+		
+	}
 
 }

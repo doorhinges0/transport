@@ -1,9 +1,8 @@
 package com.realtimestudio.transport.dao;
 
-import org.apache.hadoop.hbase.client.Connection;
 
-public interface ConnectionManager {
-	Connection getConnection();
-	void releaseConnection(Connection connection);
+public interface ConnectionManager <T>{
+	T getConnection();
+	void releaseConnection(T connection);
 	void closeAll();
 }

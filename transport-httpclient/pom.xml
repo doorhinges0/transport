@@ -9,7 +9,7 @@
 
 	<parent>
 		<groupId>com.realtimestudio</groupId>
-		<artifactId>master</artifactId>
+		<artifactId>transport-master</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>

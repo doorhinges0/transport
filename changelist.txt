@@ -27,3 +27,6 @@ Dec 28, 2015: (changelist: 10002)
 Feb 21th, 2016: (changelist: 10003)
 1. dump the simulation results directly to a file
 2. start city | end city | drive licens id | timestamp | lat | long | gas | speed | weather | pressure
+
+Sept 1, 2016: (changelist: 10004)
+Major change for baisha

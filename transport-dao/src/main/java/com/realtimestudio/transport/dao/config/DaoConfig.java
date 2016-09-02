@@ -11,8 +11,8 @@ import org.springframework.core.env.Environment;
 import com.realtimestudio.transport.dao.ConnectionManager;
 import com.realtimestudio.transport.dao.hbase.impl.ConnectionManagerImpl;
 
-@Configuration
-@PropertySource("classpath:HBase.properties")
+//@Configuration
+//@PropertySource("classpath:HBase.properties")
 public class DaoConfig {
 	
 	@Autowired

@@ -14,8 +14,8 @@ import com.realtimestudio.transport.dao.CarDao;
 import com.realtimestudio.transport.model.Car;
 import com.realtimestudio.transport.model.Driver;
 
-@Repository
-public class CarDaoImpl extends CommonDaoImpl<Car> implements CarDao {
+//@Repository
+public class CarDaoImpl extends CommonDaoImpl<Car> implements CarDao{
 
 	@Override
 	protected Car parseResult(Result result) {

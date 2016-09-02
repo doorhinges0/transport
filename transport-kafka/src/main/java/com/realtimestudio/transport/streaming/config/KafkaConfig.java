@@ -10,8 +10,8 @@ import org.springframework.core.env.Environment;
 import com.realtimestudio.transport.streaming.SignalCollector;
 import com.realtimestudio.transport.streaming.impl.KafkaSignalCollector;
 
-@Configuration
-@PropertySource("classpath:kafka.properties")
+//@Configuration
+//@PropertySource("classpath:kafka.properties")
 public class KafkaConfig {
 	
 	@Autowired

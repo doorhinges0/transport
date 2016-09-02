@@ -21,7 +21,7 @@ public class SignalCollectorServiceImpl implements SignalCollectorService {
 		String key = null;
 		try{
 			GPSSignalParser parser = new GPSSignalParserImpl(signal);
-			key = parser.getCarID();
+			key = parser.getID();
 		}
 		catch(Exception e){
 			LOGGER.error(signal + " can not be parsed", e);

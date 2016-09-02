@@ -59,4 +59,22 @@ public class StringUtils {
 		}
 	}
 	
+	public static long parseLongOrDefault(String str, long defVal){
+		try{
+			return Long.parseLong(str);
+		}
+		catch(NumberFormatException e){
+			return defVal;
+		}
+	}
+	
+	public static double parseDoubleOrDefault(String str, double defVal){
+		try{
+			return Double.parseDouble(str);
+		}
+		catch(NumberFormatException e){
+			return defVal;
+		}
+	}
+	
 }

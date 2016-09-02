@@ -21,21 +21,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.realtimestudio.transport.dao.CommonDao;
 import com.realtimestudio.transport.dao.ConnectionManager;
 
-public abstract class CommonDaoImpl<T> implements CommonDao<T> {
+public abstract class CommonDaoImpl<V> implements CommonDao<String, V> {
 	@Autowired
-	private ConnectionManager connectionManager;
+	private ConnectionManager<Connection> connectionManager;
 	
-	protected abstract T parseResult(Result result);
+	protected abstract V parseResult(Result result);
 	protected abstract String getTableName();
-	protected abstract Put buildRow(String key, T t);
+	protected abstract Put buildRow(String key, V t);
 	
 
 	@Override
-	public Map<String, T> findAll() {
+	public Map<String, V> findAll() {
 		Connection connection = connectionManager.getConnection();
 		try(Table table = connection.getTable(TableName.valueOf(getTableName()));
 				ResultScanner scanner = table.getScanner(new Scan());) {
-			Map<String, T> map = new LinkedHashMap<>();
+			Map<String, V> map = new LinkedHashMap<>();
 			for(Result result : scanner){
 				map.put(Bytes.toString(result.getRow()), parseResult(result));
 			}
@@ -50,7 +50,7 @@ public abstract class CommonDaoImpl<T> implements CommonDao<T> {
 	}
 
 	@Override
-	public T findById(String key) {
+	public V findById(String key) {
 		Connection connection = connectionManager.getConnection();
 		try(Table table = connection.getTable(TableName.valueOf(getTableName()));) {
 			Get get = new Get(Bytes.toBytes(key.toString()));
@@ -69,7 +69,7 @@ public abstract class CommonDaoImpl<T> implements CommonDao<T> {
 	
 
 	@Override
-	public void put(String key, T t) {
+	public void put(String key, V t) {
 		Connection connection = connectionManager.getConnection();
 		try(Table table = connection.getTable(TableName.valueOf(getTableName()));) {
 			Put put = buildRow(key, t);

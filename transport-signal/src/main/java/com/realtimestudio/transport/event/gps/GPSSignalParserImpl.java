@@ -112,7 +112,7 @@ public class GPSSignalParserImpl implements GPSSignalParser {
 	}
 
 	@Override
-	public String getCarID() {
+	public String getID() {
 		return carID;
 	}
 

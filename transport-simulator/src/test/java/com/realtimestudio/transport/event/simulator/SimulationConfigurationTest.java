@@ -8,10 +8,10 @@ import org.junit.Test;
 
 import com.realtimestudio.transport.event.simulation.Generator.Impl.SignalGeneratorImpl;
 import com.realtimestudio.transport.event.simulation.config.SimulationConfiguration;
-import com.realtimestudio.transport.model.Car;
-import com.realtimestudio.transport.model.Driver;
 import com.realtimestudio.transport.model.Location;
 import com.realtimestudio.transport.model.Route;
+import com.realtimestudio.transport.model.Car;
+import com.realtimestudio.transport.model.Driver;
 
 public class SimulationConfigurationTest {
 

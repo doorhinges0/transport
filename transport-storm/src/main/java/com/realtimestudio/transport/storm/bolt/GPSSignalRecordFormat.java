@@ -4,11 +4,11 @@ import java.sql.Timestamp;
 
 import org.apache.storm.hdfs.bolt.format.RecordFormat;
 
-import backtype.storm.tuple.Tuple;
-
 import com.realtimestudio.transport.event.GPS_Event;
 import com.realtimestudio.transport.model.RoutePoint;
 import com.realtimestudio.transport.storm.util.Constants;
+
+import backtype.storm.tuple.Tuple;
 
 public class GPSSignalRecordFormat implements RecordFormat{
 	
